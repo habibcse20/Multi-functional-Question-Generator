@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Question Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+
+<div class="glass">
+    <div class="header">
+        <h1>AI Question Generator</h1>
+        <p>Generate smart questions instantly from your study material</p>
+    </div>
+
+    <div class="tabs">
+        <div id="text-tab" class="tab active" onclick="switchTab('text')">Text Input</div>
+        <div id="pdf-tab" class="tab" onclick="switchTab('pdf')">PDF Upload</div>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div id="text" class="content active">
+            <textarea name="text" placeholder="Paste your study text here..."></textarea>
+        </div>
+
+        <div id="pdf" class="content">
+            <input type="file" name="file">
+        </div>
+
+        <div class="controls">
+            <select name="type">
+                <option value="mcq">MCQ</option>
+                <option value="fill">Fill in the Blank</option>
+                <option value="tf">True / False</option>
+            </select>
+
+            <select name="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <select name="num">
+                <option value="5">5 Questions</option>
+                <option value="10">10 Questions</option>
+                <option value="15">15 Questions</option>
+            </select>
+        </div>
+
+        <button type="submit">Generate Questions 🚀</button>
+    </form>
+</div>
+
+</body>
+</html>
 
