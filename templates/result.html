@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Questions</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+
+<div class="glass">
+    <div class="header">
+        <h1>Generated Questions</h1>
+    </div>
+
+    {% for q in questions %}
+        <div class="question">
+            <p><b>{{ loop.index }}. ({{ q.type }})</b> {{ q.question }}</p>
+
+            {% if q.options %}
+                <ul>
+                    {% for opt in q.options %}
+                        <li>{{ opt }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+            <div class="answer">{{ q.answer }}</div>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
 
