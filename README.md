@@ -1,4 +1,4 @@
-## Smart Question Generator App
+## Multi-functional Question Generator App
 
 An interactive, AI-powered Question Generator web application that automatically generates **MCQs, Fill-in-the-Blanks, and True/False questions** from text or PDF study materials.  
 Built with **Python, Flask, and Machine Learning (TF-IDF)** and designed with a **Modern glassmorphism UI**.
